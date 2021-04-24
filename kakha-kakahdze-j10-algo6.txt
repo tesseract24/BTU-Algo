@@ -1,0 +1,124 @@
+1.6)
+
+
+#include<stdio.h>
+
+int main(int argc, char *argv[]) {
+    int c;
+
+    while ((c = getchar()) != EOF) {
+        putchar(c);
+        printf("%d ", c != EOF);
+    }
+
+    printf("\n%d\n", c != EOF);
+
+}
+###############################################################
+
+1.7)
+
+#include<stdio.h>
+
+int main(void)
+{
+    printf("The value of EOF is %d",EOF);
+}
+
+
+###############################################################
+1.8)
+
+#include<stdio.h>
+
+int main() {
+
+    int char_count, newLines, tabs, blanks;
+
+
+    newLines = 0;
+    tabs = 0;
+    blanks = 0;
+
+    while ((char_count = getchar()) != EOF) {
+        if (char_count == ' ')
+            ++blanks;
+        if (char_count == '\t')
+            ++tabs;
+        if (char_count == '\n')
+            ++newLines;
+    }
+
+    printf("\nBlanks: %d\nTabs: %d\nNewlines: %d\n", blanks, tabs, newLines);
+
+}
+
+
+###############################################################
+1.9)
+
+
+#include<stdio.h>
+
+int main(void)
+{
+  int c, checkBlank;
+
+  checkBlank = '-';
+
+  while((c = getchar()) != EOF)
+  {
+    if(c == ' ')
+    {
+      if(checkBlank != ' ')
+        putchar(c);
+    }
+    else
+      putchar(c);
+    checkBlank=c;
+  }
+}
+
+
+###############################################################
+
+1.10)
+
+#include<stdio.h>
+
+int main(void)
+{
+  int c;
+
+  while((c = getchar()) != EOF)
+  {
+    if(c == '\t')
+    {
+      putchar('\\');
+      putchar('t');
+    }
+
+    if(c == '\b')
+    {
+      putchar('\\');
+      putchar('b');
+    }
+
+    if(c == '\\')
+    {
+      putchar('\\');
+      putchar('\\');
+    }
+
+    if(c != '\t' && c != '\b' && c != '\\')
+      putchar(c);
+  }
+}
+
+###############################################################
+
+
+
+
+getchar aris klaviaturidan migebuli brdzaneba da putchar aris conslidan
+
